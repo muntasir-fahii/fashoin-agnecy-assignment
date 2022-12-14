@@ -6,10 +6,10 @@ const Contact = () => {
       <div className="contact">
         <div className="contact-right">
           <h2 className="contact-title">contact</h2>
-          <p>France, Nice, 2 boulevard de Cimiez, 06000.</p>
-          <p>+300 549 86675</p>
-          <p>+300 549 86675</p>
-          <p>+300 549 86675</p>
+          <p>Finland, Helsinki, 2 boulevard de Cimiez, 08000.</p>
+          <p>+300 549 86664</p>
+          <p>+398 319 05628</p>
+          <p>+333 297 56375</p>
           <div className="icons">
             <span>
               <CiInstagram />
