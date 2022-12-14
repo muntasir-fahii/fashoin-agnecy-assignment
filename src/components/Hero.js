@@ -1,18 +1,24 @@
 import { useRef } from "react";
-import { useHeroImageSlide } from "../hooks/gsap";
+import { useGsapShuterUnveil } from "../hooks/gsap";
 
 const Hero = () => {
-  const heroImageSlide = useRef(null);
+  const heroRef = useRef(null);
+  const shuter1 = useRef(null);
+  const shuter2 = useRef(null);
 
-  useHeroImageSlide(heroImageSlide);
-
+  useGsapShuterUnveil(shuter1, 0, heroRef);
+  useGsapShuterUnveil(shuter2, 0.2, heroRef);
   return (
-    <section className="hero-image wrapper" ref={heroImageSlide}>
-      <img
-        src="https://img.freepik.com/free-photo/magnificent-woman-long-bright-skirt-dancing-studio-carefree-inspired-female-model-posing-with-pleasure-yellow_197531-11084.jpg?w=1380&t=st=1670869692~exp=1670870292~hmac=22ae95e19a9c17be9b7f98c1365c8ae530e70e22e19eea84be05fa01eca44f4b"
-        alt="hero img"
-      />
-    </section>
+    <div>
+      <section className="hero wrapper" ref={heroRef}>
+        <h1 className="fashion">
+          Fashion <span ref={shuter1}></span>
+        </h1>
+        <h1 className="agency">
+          agency <span ref={shuter2}></span>
+        </h1>
+      </section>
+    </div>
   );
 };
 
